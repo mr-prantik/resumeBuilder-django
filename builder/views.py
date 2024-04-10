@@ -1,6 +1,6 @@
 # Create your views here.
 
-
+from django.conf import settings
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.http import HttpResponseNotFound
@@ -13,7 +13,7 @@ import datetime
 
 
 
-client = FaunaClient(secret="fnAE5xxjPIACWtFG3s-fqA99TA8L8hSi1NfeOmeQ")
+client = FaunaClient(secret= "FaunaClient")
 indexes = client.query(q.paginate(q.indexes()))
 
 # Create your views here.
